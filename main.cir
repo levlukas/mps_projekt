@@ -1,0 +1,13 @@
+Zdroj proudu s vhodnou napetovou referenci
+
+*** NETLIST ***
+Vcc out 1 5  ;prozatim 5V
+Rb out 4 100  ;prozatimni hodnota
+Rload out 2 100  ;prozatimni hodnota
+Rs 3 0 100  ;prozatimni hodnota
+Xref 3 0 4 TL431  ;referenci napeti podle nahradniho obvodu
+
+*** PRIKAZY ***
+.INCLUDE /home/llev/OneDrive/4_letni/MPS/mps_projekt/tl431.mod
+.OP
+.END
