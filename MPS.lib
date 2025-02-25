@@ -1,0 +1,605 @@
+* Knihovna modelù a makromodelù souèástek a integrovaných obvodù, které jsou 
+* používány pøi poèítaèovém cvièení pøedmìtu BMPS - Modelování a poèítaèová simulace.
+* 
+* Sestaveno z aktuálních dostupných souborù výrobcù IO
+*
+* Poslední aktualizace 11.12.2010
+*
+*
+*=====================================================
+.model Q2N2222	NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=100 Ne=1.307
++		Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=38p Mjc=.3416 Vjc=.75 Fc=.5 Cje=126p Mje=.377 Vje=.75
++		Tr=200n Tf=12n Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+*=====================================================
+.model Q2N2221	NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=118.6 Ne=1.236
++		Ise=14.34f Ikf=.2524 Xtb=1.5 Br=7.134 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++		Tr=50.96n Tf=410.3p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+*=====================================================
+.model Q2N3904  NPN(Is=6.734f Xti=3 Eg=1.11 Vaf=74.03 Bf=416.4 Ne=1.259
++               Ise=6.734f Ikf=66.78m Xtb=1.5 Br=.7371 Nc=2 Isc=0 Ikr=0 Rc=1
++               Cjc=3.638p Mjc=.3085 Vjc=.75 Fc=.5 Cje=4.493p Mje=.2593 Vje=.75
++               Tr=239.5n Tf=301.2p Itf=.4 Vtf=4 Xtf=2 Rb=10)
+*=====================================================
+.model BC107A   NPN(Is=7.049f Xti=3 Eg=1.11 Vaf=116.3 Bf=375.5 Ise=7.049f
++               Ne=1.281 Ikf=4.589 Nk=.5 Xtb=1.5 Br=2.611 Isc=121.7p Nc=1.865
++               Ikr=5.313 Rc=1.464 Cjc=5.38p Mjc=.329 Vjc=.6218 Fc=.5 Cje=11.5p
++               Mje=.2717 Vje=.5 Tr=10n Tf=451p Itf=6.194 Xtf=17.43 Vtf=10)
+*=====================================================
+.model M2N6661  NMOS(Level=3 Gamma=0 Delta=0 Eta=0 Theta=0 Kappa=0.2 Vmax=0 Xj=0
++               Tox=2u Uo=600 Phi=.6 Kp=1.05u W=.18 L=2u Rs=20m Vto=2 Rd=0
++               Rds=9MEG Cgso=15.45p Cgdo=8.947p Cbd=108.7p Mj=.5 Pb=.8 Fc=.5
++               Rg=209.5 Is=10f N=1 Rb=1m)
+*=====================================================
+.model Q2N1420	NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++		Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=9.393p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++		Tr=46.91n Tf=410p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+*		National	pid=19		case=TO5
+*		88-09-07 bam	creation
+*=====================================================
+.model Q2N2218	NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=118.6 Ne=1.236
++		Ise=14.34f Ikf=.2524 Xtb=1.5 Br=7.134 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++		Tr=50.96n Tf=410.3p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+*		National	pid=19		case=TO5
+*		88-09-07 bam	creation
+*=====================================================
+.model Q2N1132	PNP(Is=650.6E-18 Xti=3 Eg=1.11 Vaf=115.7 Bf=70.35 Ne=1.829
++		Ise=180.5f Ikf=1.079 Xtb=1.5 Br=4.146 Nc=2 Isc=0 Ikr=0 Rc=.715
++		Cjc=29.52p Mjc=.5383 Vjc=.75 Fc=.5 Cje=19.82p Mje=.3357 Vje=.75
++		Tr=119.9n Tf=757.7p Itf=.65 Vtf=5 Xtf=1.7 Rb=10)
+*		National	pid=63		case=TO5
+*		88-09-09 bam	creation
+*=====================================================
+.model Q2N1566	NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=173.4 Ne=1.272
++		Ise=14.34f Ikf=.2689 Xtb=1.5 Br=6.458 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=9.393p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++		Tr=48.39n Tf=409.7p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+*		National	pid=19		case=TO5
+*		88-09-07 bam	creation
+*=====================================================
+.model Q2N956	NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++		Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=9.393p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++		Tr=46.91n Tf=410p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+*		National	pid=19		case=TO18
+*		88-09-07 bam	creation
+*=====================================================
+.model Q2N1711	NPN(Is=14.1f Xti=3 Eg=1.11 Vaf=100 Bf=213.7 Ne=1.5 Ise=0
++		Ikf=.75 Xtb=1.5 Br=4.96 Nc=2 Isc=0 Ikr=0 Rc=.7 Cjc=15.69p
++		Mjc=.3603 Vjc=.75 Fc=.5 Cje=55.06p Mje=.1553 Vje=.75 Tr=815.2p
++		Tf=499.1p Itf=1 Vtf=5 Xtf=55 Rb=10)
+*		Motorola	pid=2N3019	case=TO39
+*		88-09-15 bam	creation
+*=====================================================
+.model D1N4740	D(Is=1.945f Rs=2.302 Ikf=0 N=1 Xti=3 Eg=1.11 Cjo=82p M=.3649
++		Vj=.75 Fc=.5 Isr=2.04n Nr=2 Bv=10 Ibv=.35034 Nbv=.84137
++		Ibvl=10m Nbvl=.17757 Tbv1=650u)
+*		Motorola	pid=1N4740	case=DO-41
+*		89-9-19 gjg
+*		Vz = 10 @ 25mA, Zz = 24 @ 1mA, Zz = 7.25 @ 5mA, Zz = 2.9 @ 20mA
+*=====================================================
+.model D02CZ10  D(Is=9.149p N=1.461 Rs=.347 Ikf=28.61 Xti=3 Eg=1.11 Cjo=402.8p
++               M=1.533 Vj=5 Fc=.5 Isr=115.5n Nr=2 Bv=10.14 Ibv=1.416 Tt=5n)
+*=====================================================
+.model D02CZ11  D(Is=9.149p N=1.461 Rs=.347 Ikf=28.61 Xti=3 Eg=1.11 Cjo=402.8p
++               M=1.533 Vj=5 Fc=.5 Isr=109.1n Nr=2 Bv=11.14 Ibv=1.416 Tt=5n)
+*=====================================================
+.model D02bz4_7 D(Is=10.01E-21 N=2.174 Rs=1.105 Ikf=10E-21 Xti=3 Eg=1.11 Cjo=1p
++               M=.3333 Vj=.75 Fc=.5 Isr=753.9n Nr=2 Bv=4.674 Ibv=5.516m
++               Tt=14.43n)
+*=====================================================
+.model D1N750 	D(Is=880.5E-18 Rs=.25 Ikf=0 N=1 Xti=3 Eg=1.11 Cjo=175p M=.5516
++  		Vj=.75 Fc=.5 Isr=1.859n Nr=2 Bv=4.7 Ibv=20.245m Nbv=1.6989
++  		Ibvl=1.9556m Nbvl=14.976 Tbv1=-21.277u)
+*=====================================================
+*
+*
+*//////////////////////////////////////////////////////////
+*LF411 LOW OFFSET, LOW DRIFT JFET INPUT OP-AMP MACRO-MODEL
+*//////////////////////////////////////////////////////////
+*
+* connections:    non-inverting input
+*                 |   inverting input
+*                 |   |   positive power supply
+*                 |   |   |   negative power supply
+*                 |   |   |   |   output
+*                 |   |   |   |   |
+*                 |   |   |   |   |
+.SUBCKT LF411     1   2  99  50  28
+*
+*Features:
+*Fast settling time (.01%) =           2uS
+*High bandwidth =                     3MHz
+*High slew rate =                   10V/uS
+*Low offset voltage =                 .5mV
+*Low supply current =                1.8mA
+*
+****************INPUT STAGE************** 
+*
+IOS 2 1 25.0P
+*^Input offset current
+CI1 1 0 3P
+CI2 2 0 3P
+R1 1 3 1E12
+R2 3 2 1E12
+I1 99 4 1.0M
+J1 5 2 4 JX
+J2 6 7 4 JX
+R3 5 50 650
+R4 6 50 650
+*Fp2=28 MHZ
+C4 5 6 4.372P 
+*
+***********COMMON MODE EFFECT***********
+*
+I2 99 50 800UA
+*^Quiescent supply current
+EOS 7 1 POLY(1) 16 49 .8E-3 1
+*Input offset voltage.^
+R8 99 49 80K
+R9 49 50 80K
+*
+*********OUTPUT VOLTAGE LIMITING********
+V2 99 8 2.13
+D1 9 8 DX
+D2 10 9 DX
+V3 10 50 2.13
+*
+**************SECOND STAGE**************
+*
+EH 99 98 99 49 1
+G1 98 9 5 6 20E-3
+R5 98 9 10MEG
+VA3 9 11 0
+*Fp1=18 HZ
+C3 98 11 857.516P
+*
+***************POLE STAGE***************
+*
+*Fp=30 MHz
+G3 98 15 9 49 1E-6
+R12 98 15 1MEG
+C5 98 15 5.305E-15
+*
+*********COMMON-MODE ZERO STAGE*********
+*
+G4 98 16 3 49 1E-8
+L2 98 17 144.7M
+R13 17 16 1K
+*
+**************OUTPUT STAGE**************
+*
+F6  99 50 VA7 1
+F5  99 23 VA8 1
+D5  21 23 DX
+VA7 99 21 0
+D6  23 99 DX
+E1  99 26 99 15 1
+VA8 26 27 0
+R16 27 28 50
+V5  28 25 0.646V
+D4  25 15 DX
+V4  24 28 0.646V
+D3  15 24 DX
+*
+***************MODELS USED**************
+*
+.MODEL DX D(IS=1E-15)
+.MODEL JX PJF(BETA=1.183E-3 VTO=-.65 IS=50E-12)
+*
+.ENDS
+
+
+*//////////////////////////////////////////////////////////
+* REF01 SPICE MACROMODEL                     5/91, Rev. A
+*//////////////////////////////////////////////////////////
+*  NODE NUMBERS
+*                  VIN
+*                  |  GND
+*                  |  |  TRIM
+*                  |  |  |  VOUT
+*                  |  |  |  |
+.SUBCKT REF01_AD  2  4  5  6
+*
+* 1.23V REFERENCE
+*
+I1     4  10   1.22889E-6
+R1     10  4   1000E3  TC=3E-6
+G1     4  10   2  4  73.9E-12
+F1     4  10   VS  61.5E-9
+*
+* INTERNAL OP AMP
+*
+G2     4  11   10  19  2E-3
+R2     4  11   150E6
+C1     4  11   2.1E-10
+D1     11 12   DX
+V1     2  12   1.3
+*
+* SECONDARY POLE
+*
+G3     4  13   11  0  1E-6
+R3     4  13   1E6
+C2     4  13   1.2E-13
+*
+* OUTPUT STAGE
+*
+ISY    2   4   0.38E-3
+FSY    2   4   V1  -1
+G4     4  14   13  0  25E-6
+R4     4  14   40E3
+R7     17 19   14.2602E3
+R8     19  4   2E3
+R9     19  5   50E3
+R10    5   4   1E12
+Q1     16 14   17   QN
+VS     18 17   DC 0
+L1     18  6   1E-7
+*
+* OUTPUT CURRENT LIMIT
+*
+Q2     15  2   16  QN
+R6     2  16   21
+R5     2  15   18E3
+C3     2  15   1E-6
+G5     14  4   2  15  1
+*
+.MODEL  QN  NPN(IS=1E-15  BF=1000)
+.MODEL  DX  D(IS=1E-15)
+.ENDS
+*$
+
+
+*//////////////////////////////////////////////////////////
+*AD8001A SPICE Macro Model       9/94, Rev. A
+*//////////////////////////////////////////////////////////
+*
+* Node assignments
+*                  Non-inverting input
+*                  | Inverting input
+*                  | | Positive supply
+*                  | | | Negative supply
+*                  | | | | Output
+*                  | | | | |
+.SUBCKT AD8001a/AD 3 2 7 4 6
+*
+* INPUT STAGE
+*
+CIN 3 4 1.5E-12
+GB1 7 3 POLY(1) 3 100 (3E-6,0.2E-6)
+EOS 9 3 POLY(1) 23 100 (2E-3,1)
+Q1 7 9 10 QN
+I1 10 4 DC 2.568E-4
+I2 7 11 DC 2.568E-4
+Q2 4 9 11 QP
+R1 7 14 1E3
+V1 7 17 DC 6.96561E-2
+D1 17 14 DX
+Q3 14 11 15 QN
+Q4 16 10 15 QP
+R2 16 4 1E3
+D2 16 18 DX
+V2 18 4 DC 6.96561E-2
+LIN- 15 2 0.1E-9
+GB2 7 2 POLY(1) 3 100 (5E-6,0.3E-6)
+CS1 7 2 0.03E-12
+CS2 2 4 0.03E-12
+*
+* GAIN STAGE AND DOMINANT POLE AT 230 kHz
+*
+EREF 100 0 POLY(2) (7,0) (4,0) (0,0.5,0.5)
+G1 100 19 7 14 1E-3
+G2 19 100 16 4 1E-3
+R3 19 100 1.24E6
+C1 19 100 5.580468E-13
+V3 7 20 DC 2.3747
+D3 19 20 DX
+D4 21 19 DX
+V4 21 4 DC 2.3747
+*
+* COMMON-MODE REJECTION NETWORK WITH ZERO AT 22 MHz
+*
+ECM 100 22 3 100 19.95
+RCM1 22 23 1E4
+CCM 22 23 7.2343E-13
+RCM2 23 100 1
+*
+* POLE AT 800 MHz
+*
+G4 100 24 19 100 1E-6
+R5 24 100 1E6
+C3 24 100 1.9894368E-16
+*
+* POLE AT 4 GHz
+*
+G5 100 25 24 100 1E-6
+R6 25 100 1E6
+C4 25 100 3.9788736E-17
+*
+* OUTPUT STAGE
+*
+VW 25 30 DC 0
+*
+FSY 7 4 POLY(2) VSY1 VSY2 (4.2326E-3,1,1)
+GSY 100 35 33 30 4.6728972E-2
+DSY1 35 36 DX
+VSY1 36 100 DC 0
+DSY2 37 35 DX
+VSY2 100 37 DC 0
+DSC1 30 31 DX
+VSC1 31 33 DC 0.62526
+DSC2 32 30 DX
+VSC2 33 32 DC 0.62526
+GO1 33 7 7 30 4.6728972E-2
+RO1 7 33 21.4
+GO2 4 33 30 4 4.6728972E-2
+RO2 33 4 21.4
+LO 33 6 7E-9
+*
+.MODEL QN NPN(BF=100 IS=1E-15)
+.MODEL QP PNP(BF=100 IS=1E-15)
+.MODEL DX D(IS=1E-15)
+*
+.ENDS AD8001A
+
+
+*//////////////////////////////////////////////////////////
+* Model for 741 op-amp
+*//////////////////////////////////////////////////////////
+*
+* connections:   non-inverting input
+*                |  inverting input
+*                |  |  positive power supply
+*                |  |  |  negative power supply
+*                |  |  |  |  output
+*                |  |  |  |  |
+.subckt uA741    1  2  3  4  5
+*
+  c1   11 12 8.661E-12
+  c2    6  7 30.00E-12
+  dc    5 53 dx
+  de   54  5 dx
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    4  3 dx
+  egnd 99  0 poly(2) (3,0) (4,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 10.61E6 -10E6 10E6 10E6 -10E6
+  ga    6  0 11 12 188.5E-6
+  gcm   0  6 10 99 5.961E-9
+  iee  10  4 dc 15.16E-6
+  hlim 90  0 vlim 1K
+  q1   11  2 13 qx
+  q2   12  1 14 qx
+  r2    6  9 100.0E3
+  rc1   3 11 5.305E3
+  rc2   3 12 5.305E3
+  re1  13 10 1.836E3
+  re2  14 10 1.836E3
+  ree  10 99 13.19E6
+  ro1   8  5 50
+  ro2   7 99 100
+  rp    3  4 18.16E3
+  vb    9  0 dc 0
+  vc    3 53 dc 1
+  ve   54  4 dc 1
+  vlim  7  8 dc 0
+  vlp  91  0 dc 40
+  vln   0 92 dc 40
+.model dx D(Is=800.0E-18 Rs=1)
+.model qx NPN(Is=800.0E-18 Bf=93.75)
+.ends
+
+*//////////////////////////////////////////////////////////
+* Model for LT1113 By Linear Technology
+*//////////////////////////////////////////////////////////
+*
+* connections:      non-inverting input
+*                   |  inverting input
+*                   |  |  positive power supply
+*                   |  |  |  negative power supply
+*                   |  |  |  |  output
+*                   |  |  |  |  |
+.SUBCKT  LT1113/LT  1  2  3  4  5
+*
+GRP1 1 111 1 111 0.1
+GRP2 2 112 2 112 0.1
+DIP1 114 111 DX
+DIP2 115 112 DX
+DIP3 116 114 DX
+DIP4 116 115 DX
+VCM 116 4 DC 4.325
+RCMP 114 117 10000
+ECMP 117 4 111 4 1.0
+RCMN 115 118 10000
+ECMN 118 4 112 4 1.0
+CIN 111 112 1.2711e-11
+GRIN 111 112 111 112 1e-11
+M1 11 112 10 10 M1 L=100U W=100U
+M2 12 113 10 10 M2 L=100U W=100U
+RD1 3 11 1904.4 TC=-8.1097e-5
+RD2 3 12 1904.4 TC=8.1097e-5
+DI1 113 3 DI1
+DI2 112 3 DI2
+C1 11 12 5.2232e-12
+IEE 10 4 DC 0.0010502
+GA 60 99 11 12 0.00052509
+IR1 0 101 DC 1
+IR2 0 102 DC 1
+DR1 101 0 DRI
+DR2 102 0 DRI
+GRI1 99 1 101 102 5.565e-8
+IR3 0 103 DC 1
+IR4 0 104 DC 1
+DR3 103 0 DRI
+DR4 104 0 DRI
+GRI2 99 2 103 104 5.565e-8
+RRu 605 0 9.2679
+VRu 605 0 DC 0
+FRu 99 60 VRu 1
+GCM1 99 20 POLY(2) 111 99 112 99 0 0.0005 0.0005
+RCM1 21 99 1000
+RCM2 20 99 1000000
+LCM 20 21 0.01061
+ECM 113 111 20 99 1.7783e-5
+RP1 601 99 1904.8
+CP1 60 601 3.3423e-11
+RP11 60 99 10000
+GP1 99 61 60 99 0.0001
+RP2 611 99 14545
+LP2 61 611 0.00092599
+RP22 61 99 32000
+GP2 99 6 61 99 0.0001
+R2 6 99 1000
+C2 6 7 2.3754e-10
+GB 7 99 6 99 6381.2
+R01 7 99 70
+R02 7 50 0.1
+R03 50 5 69.9
+R04 5 99 1.0000e+012
+VC 53 50 DC 2.1
+VE 54 50 DC -1.7
+DC1 53 55 DX
+DC2 55 56 DX
+DE1 57 54 DX
+DE2 58 57 DX
+GVC1 3 56 3 56 1.0E-4
+GVE1 4 58 4 58 1.0E-4
+GVC2 3 55 3 55 1.0E-5
+GVE2 4 57 4 57 1.0E-5
+GVLP 99 60 56 3 1
+GVLN 99 60 58 4 1
+ECLP 91 0 7 50 500
+ECLN 92 0 7 50 500
+DCLP 91 90 DX
+DCLN 90 92 DX
+VLIM 90 0 DC 0
+FB 7 99 VLIM 132.59
+EGND 99 0 POLY(2) 3 0 4 0 0 0.5 0.5
+DSUB 4 3 DX
+IP 3 4 DC 0.0042498
+GV 31 0 7 50 10
+DP1 3 31 DX
+DP2 33 4 DX
+RGV 32 33 10.0
+EGV 31 32 POLY(1) 3 4 -0.85 1.0
+.MODEL DX D IS=8e-16 RS=0 XTI=0
+.MODEL M1 NMOS LEVEL=3 KP=0.095221 VTO=1.000258 KF=7.9898e-28
+.MODEL M2 NMOS LEVEL=3 KP=0.095221 VTO=0.9997418 KF=7.9898e-28
+.MODEL DI1 D IS=3.6931e-10 EG=0.25981 XTI=3
+.MODEL DI2 D IS=3.3187e-10 EG=0.26997 XTI=3
+.MODEL DRI D IS=8e-16 KF=3.1436e-27 RS=0 XTI=0
+.ENDS LT1113
+
+
+*//////////////////////////////////////////////////////////
+* Model for OPA860_OTA By Texas Instruments
+*//////////////////////////////////////////////////////////
+*
+* CONNECTIONS:
+*                         B Input
+*                         |  C Output
+*                         |  |   E Input/Output
+*                         |  |   |    Quiescent Current Adjust 
+*                         |  |   |    |    Positive Supply
+*                         |  |   |    |     |   Negative Supply
+*                         |  |   |    |     |   | 
+.SUBCKT OPA860_OTA        B  C   E  IQADJ   V+  V- 
+
+.PARAM A_Q35 = 1.25
+.PARAM A_Q46 = {A_Q35*1.6}
+.PARAM A_Q78 = {A_Q35*3.2}
+.PARAM A_Q1011 = {A_Q35*0.8}
+
+V_V1         b1 V- DC 0.10813096  
+R_R11         B 23a  50  
+R_R10         B 23  50  
+R_R6         b4 b3  329  
+R_R17         V- 29  250  
+R_R12         V- 25  150  
+R_R4         IQADJ b4  220  
+R_R5         V- b4  30k  
+R_R21         V- 39  50  
+C_C2         C 37  1.85pF  
+R_R35         C 37  100K  
+C_C3         39 C  1.85pF  
+R_R36         39 C  100K  
+R_R13         26 V+  150  
+R_R8         21 V+  250  
+R_R20         37 V+  50  
+R_R18         CM1 V+  50  
+R_R19         V- CM3  50  
+R_R14         22 30  125  
+R_R15         28 31  110  
+X_F1    b1 b2 +Io V- OPA861_Model_F1 
+X_F2    b2 b3 V+ -Io OPA861_Model_F2 
+Q_Q3         22 +Io 21 PNP6 {A_Q35}
+Q_Q4         +Io +Io 26 PNP6 {A_Q46}
+Q_Q1         -Io 23 22 PNP6 0.25
+Q_Q2         +Io 23a 28 NPN6 0.25
+Q_Q5         -Io -Io 25 NPN6 {A_Q35}
+Q_Q6         28 -Io 29 NPN6 {A_Q46}
+G_G4         C 39 CM3 V- 0.02
+G_G3         37 C V+ CM1 0.0201190476
+V_V5         CM1 33 DC .792  
+V_V6         35 CM3 DC .792  
+Q_Q10         30 30 99 NPN6 {A_Q1011}
+Q_Q11         31 31 99 PNP6 {A_Q1011}
+Q_Q8         35 31 E PNP6 {A_Q78}
+Q_Q7         33 30 E NPN6 {A_Q78}
+
+.MODEL NPN6 NPN
++ IS=70.40E-18 BF=157 NF=1.0 VAF=70 IKF=39.750E-3 ISE=32.190E-15 NE=2
++ BR=.7614 NR=1.0E+00 VAR=1.4520 IKR=81.720E-3 ISC=7.6180E-21 NC=1.8470
++ RE=5.537E+00 RB=3.346E+01 IRB= 0.000E+00 RBM= 2.400E+00 RC=2.156E+01
++ CJE=120.20E-15 VJE=.7591 MJE=.5406 CJC=133.80E-15 VJC=.6666
++ MJC=.4509 XCJC=8.450E-02 TR = 4.000E-11 CJS= 3.180E-14 FC=.827
++ TF=12.130E-12 XTF=2.0490 VTF=1.8130 ITF=42.930E-3 TR=40.000E-12 
++ CJS= 3.180E-14 EG=1.1840 XTB=1.0220 XTI=1.7800 KF = 17.500E-15 
++ AF = 1.000E+00 FC = 8.273E-01
+
+.MODEL PNP6 PNP
++ IS = 2.015E-16 BF = 1.418E+02 NF = 1.000E+00 VAF= 5.058E+01
++ IKF= 1.085E-01 ISE= 2.233E-15 NE = 1.505E+00 BR = 3.252E+01
++ NR = 1.050E+00 VAR= 1.093E+00 IKR= 5.000E-05 ISC= 6.621E-16
++ NC = 1.150E+00 RB = 3.346E+01 IRB= 0.000E+00 RBM= 2.40e+00
++ RE = 5.537E+00 RC = 2.156E+01 CJE= 1.202E-13 VJE= 7.320E-01
++ MJE= 4.930E-01 TF = 1.303E-11 XTF= 3.500E+01 VTF= 3.259E+00
++ ITF= 2.639E-01 PTF= 0.000E+00 CJC= 1.595E-13 VJC= 7.743E-01
++ MJC= 5.000E-01 XCJC=8.504E-02 TR = 1.500E-10 CJS= 7.620E-13
++ VJS= 9.058E-01 MJS= 4.931E-01 XTB= 1.732E+00 EG = 1.184E+00
++ XTI= 2.000E+00 KF = 10.890E-16 AF = 1.000E+00 FC = 8.500E-01
+
+.ENDS    OPA860_OTA
+
+.subckt OPA861_Model_F1 1 2 3 4  
+F_F1         3 4 VF_F1 5.230536
+VF_F1         1 2 0V
+.ends OPA861_Model_F1
+
+.subckt OPA861_Model_F2 1 2 3 4  
+F_F2         3 4 VF_F2 5.15646
+VF_F2         1 2 0V
+.ends OPA861_Model_F2
+
+
+
+*//////////////////////////////////////////////////////////
+* Model for CITA - one active element
+*//////////////////////////////////////////////////////////
+*
+.SUBCKT CITA N X+ X- Z Vp Vm G
+
+Radj1 Vm Adj1 330
+Radj2 Vm Adj2 330
+Radj3 Vm Adj3 330
+
+Rg 2 1 1k
+
+X1 G Z N Adj1 Vp Vm OPA860_OTA
+X2 Z X+ 1 Adj2 Vp Vm OPA860_OTA
+X3 G X- 2 Adj3 Vp Vm OPA860_OTA
+
+.ENDS CITA
