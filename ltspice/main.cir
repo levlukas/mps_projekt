@@ -12,8 +12,6 @@ Vaux 2 5 0  ; pomocne napeti pro vystup
 
 *** PRIKAZY ***
 .include /home/llev/OneDrive/4_letni/MPS/mps_projekt/tl431.mod
-.include /home/llev/OneDrive/4_letni/MPS/mps_projekt/MPS.lib
-.op			f
-.print I(Vmeas)
+.lib mps.lib
 .tran 10u 10m
 .end
