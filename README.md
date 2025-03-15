@@ -26,3 +26,17 @@ Zapojeni nize bylo poskytnuto vyucujicim
   
 - Experiment č. 2: Analyzujte spektrální hustotu šumového výkonu a proudu zátěží v kmitočtovém pásmu 1 Hz až 150 kHz. Zjistěte efektivní hodnotu šumového proudu v tomto frekvenčním pásmu (a srovnejte ji s velikostí pracovního proudu Iout).
 - Experiment č. 3: Proveďte další experiment dle vlastního uvážení.
+
+# Notes
+## Zapojeni
+- `R_s` **nastavuje proud** na vystupu (na vystupu reference, ktera vyhodi napeti)
+- `transistor` jako **proudovy regulator**
+- `TL431` nastavuje **stabilni napeti na vystupu**
+- `R_load` dostava **konstantni proud**
+- `R_b` nastavuje **proud bazi** transistoru podle $I_b=\frac{I_C}{h_FE}$
+
+## Soucastky
+- `2N222` je stabilni pro nizsi proudy, proto jsou lepsi:
+  - BC337 (better gain and lower saturation voltage)
+  - 2N2907 (PNP alternative)
+  - MOSFETs (like IRLZ34N) if you need better efficiency in switching applications.
