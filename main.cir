@@ -1,19 +1,20 @@
-Zdroj proudu s vhodnou napetovou referenci
+* Zdroj proudu s vhodnou napetovou referenci
+* zvolim si Iout = 25 mA
 
 *** NETLIST ***
-Vcc out 1 5  ;prozatim 5V
-Rb out 4 100  ;prozatimni hodnota
-Rload out 2 100  ;prozatimni hodnota
+Vcc in 0 sine(0 5 1k)  ;prozatim 5V
+Rb auxib 4 15k  ;aby Ib=.25mA
+Rload in 2 100  ;prozatimni hodnota
 Rs 3 0 100  ;prozatimni hodnota
 Xref 3 0 4 TL431  ;referenci napeti podle nahradniho obvodu
-Q1 3 4 2 Q2N2222  ;nahodny jfet
+Q1 3 4 2 Q2N2222
 
 Vaux 2 5 0  ; pomocne napeti pro vystup
+VIb in auxib 0  ;pomocne pro Ib
 
 *** PRIKAZY ***
-.include /home/llev/OneDrive/4_letni/MPS/mps_projekt/tl431.mod
-.include /home/llev/OneDrive/4_letni/MPS/mps_projekt/MPS.lib
-.op			f
-.print I(Vmeas)
-.tran 10u 10m
+.include tl431.mod
+.op
+.include MPS.lib
+.tran 2u 2m
 .end
