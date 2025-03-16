@@ -1,0 +1,37 @@
+* ====== Zdroj proudu s vhodnou napetovou referenci ======
+*
+* Zvoleno: Iout = 25 mA
+* Iout = Vref / Rs
+* Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
+*
+* Experiment č. 1:
+* Změřte teplotní koeficient proudu Iout při zátěži 100 Ω
+* a Vcc = 5 V. Zjistěte závislost proudu Iout na velikosti
+* zátěže. Ověřte výpočtem maximální hodnotu zátěže, kterou
+* ještě může protékat nastavený konstantní proud.
+*
+* Experiment 1a:
+* Zjistěte závislost proudu Iout na velikosti zátěže.
+* Ověřte výpočtem maximální hodnotu zátěže, kterou
+* ještě může protékat nastavený konstantní proud.
+
+
+*** NETLIST ***
+Vcc in 0 5  ;5V
+Rb auxib kat 1k
+Rload in col {val_rload}
+Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 2.5/25m
+Xref ref 0 kat TL431
+Q1 col kat ref Q2N2222
+
+VIb in auxib 0  ;pomocne pro Ib
+
+
+*** PRIKAZY ***
+.step param val_rload 100 10k 100
+.include ../../tl431.mod
+.include ../../MPS.lib
+.op
+.end
+
+
