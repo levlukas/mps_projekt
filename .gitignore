@@ -2,3 +2,5 @@
 *.raw
 *.out
 *.raw
+plot_parser/temp
+python_venv/
