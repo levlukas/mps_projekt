@@ -4,7 +4,7 @@ Reads ltspice planetext file and outputs it as csv to temp folder in plot_parser
 import os
 import pandas as pd
 
-INP_PATH = f'/home/llev/OneDrive/4_letni/MPS/mps_projekt/1_experiment/1a/1a_Iout_temp-stab.txt'
+INP_PATH = f'./1_experiment/1b/1b_experiment.txt'
 LTSPICE_FILE_NAME = INP_PATH.split('/')[-1].split('.')[0]
 
 def ltspice_to_csv(inp_path):

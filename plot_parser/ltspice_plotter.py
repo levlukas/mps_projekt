@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import os
 
-INP_PATH = f'./plot_parser/temp/1a_Iout_temp-stab.csv'
+INP_PATH = f'./plot_parser/temp/1b_experiment.csv'
 LTSPICE_FILE_NAME = INP_PATH.split('/')[-1].split('.')[0]
 
 def plot_csv(inp_path):
