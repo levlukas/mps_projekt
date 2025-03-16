@@ -40,3 +40,4 @@ Zapojeni nize bylo poskytnuto vyucujicim
   - BC337 (better gain and lower saturation voltage)
   - 2N2907 (PNP alternative)
   - MOSFETs (like IRLZ34N) if you need better efficiency in switching applications.
+- `TL431` - **defaultni reference je 2.5V**

@@ -1,15 +1,17 @@
-* Zdroj proudu s vhodnou napetovou referenci
-* zvolim si Iout = 25 mA
+* ====== Zdroj proudu s vhodnou napetovou referenci ======
+*
+* Zvoleno: Iout = 25 mA
+* Iout = Vref / Rs
+* Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
 
 *** NETLIST ***
-Vcc in 0 sine(0 5 1k)  ;prozatim 5V
-Rb auxib 4 15k  ;aby Ib=.25mA
-Rload in 2 100  ;prozatimni hodnota
-Rs 3 0 100  ;prozatimni hodnota
-Xref 3 0 4 TL431  ;referenci napeti podle nahradniho obvodu
-Q1 3 4 2 Q2N2222
+Vcc in 0 sine(0 5 1k)  ;prozatim 5Vpp
+Rb auxib kat 15k  ;aby Ib=~250uA
+Rload in col 100
+Rs ref 0 100  ;prozatimni hodnota
+Xref ref 0 kat TL431  ;referenci napeti podle nahradniho obvodu
+Q1 col kat ref Q2N2222
 
-Vaux 2 5 0  ; pomocne napeti pro vystup
 VIb in auxib 0  ;pomocne pro Ib
 
 *** PRIKAZY ***
