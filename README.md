@@ -25,6 +25,7 @@ Zapojeni nize bylo poskytnuto vyucujicim
 - Experiment č. 1: Změřte teplotní koeficient proudu Iout při zátěži 100 Ω a Vcc = 5 V. Zjistěte závislost proudu Iout na velikosti zátěže. Ověřte výpočtem maximální hodnotu zátěže, kterou ještě může protékat nastavený konstantní proud.
   
 - Experiment č. 2: Analyzujte spektrální hustotu šumového výkonu a proudu zátěží v kmitočtovém pásmu 1 Hz až 150 kHz. Zjistěte efektivní hodnotu šumového proudu v tomto frekvenčním pásmu (a srovnejte ji s velikostí pracovního proudu Iout).
+
 - Experiment č. 3: Proveďte další experiment dle vlastního uvážení.
 
 # Notes

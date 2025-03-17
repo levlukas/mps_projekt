@@ -1,0 +1,32 @@
+* ====== Zdroj proudu s vhodnou napetovou referenci ======
+*
+* Zvoleno: Iout = 25 mA
+* Iout = Vref / Rs
+* Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
+*
+* Experiment č. 2:
+* Analyzujte spektrální hustotu šumového výkonu a proudu
+* zátěží v kmitočtovém pásmu 1 Hz až 150 kHz. Zjistěte
+* efektivní hodnotu šumového proudu v tomto frekvenčním
+* pásmu (a srovnejte ji s velikostí pracovního proudu Iout).
+
+
+*** NETLIST ***
+Vcc in 0 sine(0 5 {vcc_freq})  ;5V
+Rb auxib kat 1k
+Rload in col 100  ;stejne jako exp. 1a
+Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 2.5/25m
+Xref ref 0 kat TL431
+Q1 col kat ref Q2N2222
+
+VIb in auxib 0  ;pomocne pro Ib
+
+
+*** PRIKAZY ***
+.step param vcc_freq 1 150k 1000
+.include ../../tl431.mod
+.include ../../MPS.lib
+.op
+.end
+
+
