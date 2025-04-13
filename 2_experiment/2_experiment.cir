@@ -28,5 +28,5 @@ VIb in auxib 0  ;pomocne pro Ib
 .include ../../MPS.lib
 .op
 .end
-
+.tran 0 1 1m
 
