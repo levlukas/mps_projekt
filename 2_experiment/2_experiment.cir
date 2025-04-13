@@ -12,21 +12,18 @@
 
 
 *** NETLIST ***
-Vcc in 0 sine(0 5 {vcc_freq})  ;5V
-Rb auxib kat 1k
+Vcc in 0 1V  AC 5V 0deg; pro op 1V, pro ac 5V bez phi0
+Rb in kat 1k
 Rload in col 100  ;stejne jako exp. 1a
 Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 2.5/25m
 Xref ref 0 kat TL431
 Q1 col kat ref Q2N2222
 
-VIb in auxib 0  ;pomocne pro Ib
-
 
 *** PRIKAZY ***
-.step param vcc_freq 1 150k 1000
-.include ../../tl431.mod
-.include ../../MPS.lib
+.include ../tl431.mod
+.include ../MPS.lib
 .op
+*.ac dec 1000 1 150k  ;ac analyza pro tisic bodu v def. freq
+.noise V(in,col) VCC dec 1000 1 150k
 .end
-.tran 0 1 1m
-

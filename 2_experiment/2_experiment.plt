@@ -1,3 +1,25 @@
+[Noise Spectral Density - (V/Hz½ or A/Hz½)]
+{
+   Npanes: 2
+   {
+      traces: 1 {589826,0,"v(onoise)*v(onoise)/100"}
+      X: ('K',0,1,0,150000)
+      Y[0]: ('f',7,2.289e-19,7e-22,2.359e-19)
+      Y[1]: ('n',1,1e+308,1e-10,-1e+308)
+      Units: "V²/Hz" ('f',0,0,1,2.289e-19,7e-22,2.359e-19)
+      Log: 1 0 0
+      GridStyle: 1
+   },
+   {
+      traces: 1 {524291,0,"v(onoise)/100"}
+      X: ('K',0,1,0,150000)
+      Y[0]: ('p',2,4.781e-11,7e-14,4.858e-11)
+      Y[1]: ('n',1,1e+308,1e-10,-1e+308)
+      Units: "V/Hz½" ('p',0,0,2,4.781e-11,7e-14,4.858e-11)
+      Log: 1 0 0
+      GridStyle: 1
+   }
+}
 [Operating Point]
 {
    Npanes: 1
