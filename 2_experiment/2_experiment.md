@@ -1,2 +1,0 @@
-# Experiment 2
-Analyzujte spektrální hustotu šumového výkonu a proudu zátěží v kmitočtovém pásmu 1 Hz až 150 kHz. Zjistěte efektivní hodnotu šumového proudu v tomto frekvenčním pásmu (a srovnejte ji s velikostí pracovního proudu Iout).
