@@ -1,0 +1,43 @@
+
+**** 04/21/25 12:33:43 *** PSpice 24.1.0 (26 February 2025) *** ID# 0 ********
+
+ * ====== Zdroj proudu s vhodnou napetovou referenci ======
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+*
+* Zvoleno: Iout = 25 mA
+* Iout = Vref / Rs
+* Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
+*
+* Experiment è. 3:
+* Sledovani harmonickeho zkresleni
+*
+* NOTES:
+* - uzel 'in' byl prejmenovan na '3', z duvodu chyby .noise
+
+*** NETLIST ***
+Vin 3 0 stimulus=SIN(0 1 1k 0 0 0)
+---------------------$
+ERROR(ORPSIM-16346): STIMULUS <name> must be last
+Rb 3 kat 1k
+$
+ERROR(ORPSIM-16492): Missing value
+Rload 3 col 100  ;stejne jako exp. 1a
+Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 2.5/25m
+Xref ref 0 kat TL431
+Q1 col kat ref Q2N2222
+
+*** PRIKAZY *** 
+.lib tl431.mod
+.lib MPS.lib
+.tran 1u 1m 1u SKIPBP
+.probe
+.end
+
