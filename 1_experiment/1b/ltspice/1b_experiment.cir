@@ -4,9 +4,15 @@
 * Iout = Vref / Rs
 * Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
 *
-* Experiment c. 0:
-* S modelem klícové soucástky sestavte zdroj proudu (zvolte
-* honotu Iout mezi 5mA a 50 mA) podle doporuceného zapojení
+* Experiment č. 1:
+* Změřte teplotní koeficient proudu Iout při zátěži 100 Ω a
+* Vcc = 5 V. Zjistěte závislost proudu Iout na velikosti zátěže.
+* Ověřte výpočtem maximální hodnotu zátěže, kterou ještě
+* může protékat nastavený konstantní proud.
+*
+* Experiment 1b:
+* Zjistěte závislost proudu Iout na velikosti zátěže.
+
 
 *** NETLIST ***
 Vcc 		in 		0 		{vccval}  ;5V
