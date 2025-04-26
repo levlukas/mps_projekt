@@ -21,17 +21,18 @@ Vcc in 0 5  ;5V
 Rb auxib kat 1k
 Rload in col {val_rload}
 Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 2.5/25m
-Xref ref 0 kat TL431
+Xref ref 0 auxkat TL431
 Q1 col kat ref Q2N2222
 
 VIb in auxib 0  ;pomocne pro Ib
+Vka kat auxkat 0
 
 
 *** PRIKAZY ***
-.step param val_rload 100 10k 100
-.include ../../tl431.mod
-.include ../../MPS.lib
-.op
+.param val_rload = 100
+.step param val_rload 100 10k 1000	 
+.lib tl431.mod
+.lib MPS.lib	
 .end
 
 

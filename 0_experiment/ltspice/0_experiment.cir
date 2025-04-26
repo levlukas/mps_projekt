@@ -1,0 +1,31 @@
+* ====== Zdroj proudu s vhodnou napetovou referenci ======
+*
+* Zvoleno: Iout = 25 mA
+* Iout = Vref / Rs
+* Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
+*
+* Experiment c. 0:
+* S modelem klícové soucástky sestavte zdroj proudu (zvolte
+* honotu Iout mezi 5mA a 50 mA) podle doporuceného zapojení
+
+*** NETLIST ***
+Vcc 		in 		0 		{vccval}  ;5V
+Rb 		auxib 	kat	1k
+Rload auxcol col 	{valRload}
+Rs 		ref 		0 		100  ;Iout = Vref / Rs -> Rs = 2.5/25m
+Xref 	ref 		0 		auxkat 	TL431
+Q1 		col 		kat 	ref 			Q2N2222
+
+* pomocne zdroje pro odecet proudu
+VIb		in 	auxib 		0
+Vka 	kat 	auxkat 	0
+Vload 	in		auxcol		0
+
+
+*** PRIKAZY ***
+.op
+.step param valrload 5 10k 100
+.step param vccval list 5 30
+.lib ../tl431.mod
+.lib ../MPS.lib
+.end
