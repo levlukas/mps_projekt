@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import os
 
-INP_PATH = f'./plot_parser/temp/1b_experiment.csv'
+INP_PATH = f'temp/0_experiment.csv'
 LTSPICE_FILE_NAME = INP_PATH.split('/')[-1].split('.')[0]
 
 def plot_csv(inp_path):
@@ -19,9 +19,9 @@ def plot_csv(inp_path):
     plt.title(f'LTspice simulation: {LTSPICE_FILE_NAME}')
 
     # save plot
-    if not os.path.exists('./plot_parser/temp'):
-        os.mkdir('./plot_parser/temp')
-    plt.savefig(f'./plot_parser/temp/{LTSPICE_FILE_NAME}.png')
+    if not os.path.exists('temp'):
+        os.mkdir('temp')
+    plt.savefig(f'temp/{LTSPICE_FILE_NAME}.png')
 
 def main():
     if not os.path.exists(INP_PATH):
