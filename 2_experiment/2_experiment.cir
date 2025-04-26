@@ -14,16 +14,21 @@
 * - uzel 'in' byl prejmenovan na '3', z duvodu chyby .noise
 
 *** NETLIST ***
-Vin 3 0 1V  AC 1V  ;pro op 1V pro ac 5V bez phi0
+Vin 3 0 {VCC}  AC {VCC}
 Rb 3 kat 1k
-Rload 3 col 100  ;stejne jako exp. 1a
-Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 2.5/25m
+Rload aux3 col 100  ;stejne jako exp. 1a
+Rs ref 0 250 ;Iout = Vref / Rs -> Rs = 2.5/10m
 Xref ref 0 kat TL431
 Q1 col kat ref Q2N2222
+
+Vload 3 aux3 0
 
 *** PRIKAZY ***	
 .lib tl431.mod
 .lib MPS.lib
+.param VCC = 19.1
+*.step  param  VCC list 15 30 
+.op
 .ac dec 1000 1 150k  ;ac analyza pro tisic bodu v def. freq
 .noise V(3,col) Vin ;dec 1000 1 150k - pro LTspice bez AC
 .probe
