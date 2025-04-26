@@ -1,6 +1,10 @@
 *.log
+*.mif
+*.ind
 *.raw
-*.out
+*.out*
+*.prb
+*.dat
 *.raw
 plot_parser/temp
 python_venv/

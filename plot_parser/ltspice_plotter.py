@@ -5,9 +5,9 @@ import os
 INP_PATHS = ['temp/0_experiment_0.csv', 'temp/0_experiment_1.csv', 'temp/0_experiment_2.csv']
 SERIES_NAMES = ['Vcc = 5 V', 'Vcc = 15 V', 'Vcc = 36 V']  # Names for each series
 SERIES_COLORS = ['blue', 'green', 'red']  # Colors for each series
-LTSPICE_FILE_NAME = "combined_plot"
-X_AXIS_TITLE = "$I_{load}$"
-Y_AXIS_TITLE = "$R_{load}$"
+LTSPICE_FILE_NAME = "experiment_1b"
+X_AXIS_TITLE = "$R_{load}$"
+Y_AXIS_TITLE = "$I_{load}$"
 X_AXIS_UNIT = "$\Omega$"  # Unit for the x-axis (optional)
 Y_AXIS_UNIT = "A"  # Unit for the y-axis (optional)
 LOG_X_AXIS = True  # Set to True to use a logarithmic scale for the x-axis
