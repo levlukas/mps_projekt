@@ -1,4 +1,6 @@
 *.log
+*.mif
+*.ind
 *.raw
 *.out
 *.raw
