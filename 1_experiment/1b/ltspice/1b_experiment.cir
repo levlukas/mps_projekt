@@ -15,7 +15,7 @@
 
 
 *** NETLIST ***
-Vcc 		in 		0 		{vccval}  ;5V
+Vcc 		in 		0 		{vccval}
 Rb 		auxib 	kat	1k
 Rload auxcol col 	{valRload}
 Rs 		ref 		0 		100  ;Iout = Vref / Rs -> Rs = 2.5/25m
