@@ -2,13 +2,15 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import os
 
-INP_PATHS = ['temp/0_experiment_0.csv', 'temp/0_experiment_1.csv']
-SERIES_NAMES = ['Experiment 0', 'Experiment 1']  # Names for each series
+INP_PATHS = ['temp/0_experiment_0.csv', 'temp/0_experiment_1.csv', 'temp/0_experiment_2.csv']
+SERIES_NAMES = ['Vcc = 5 V', 'Vcc = 15 V', 'Vcc = 36 V']  # Names for each series
 LTSPICE_FILE_NAME = "combined_plot"
 X_AXIS_TITLE = "X-Axis"
 Y_AXIS_TITLE = "Y-Axis"
-LOG_X_AXIS = False  # Set to True to use a logarithmic scale for the x-axis
+LOG_X_AXIS = True  # Set to True to use a logarithmic scale for the x-axis
 LOG_Y_AXIS = False  # Set to True to use a logarithmic scale for the y-axis
+ENABLE_PRIMARY_GRID = True  # Set to True to enable primary grid
+ENABLE_SECONDARY_GRID = True  # Set to True to enable secondary grid
 
 def plot_csv(inp_path, series_name):
     # Read the CSV file, skipping the second line (additional data)
@@ -41,6 +43,14 @@ def main():
         plt.xscale('log')
     if LOG_Y_AXIS:
         plt.yscale('log')
+
+    # Add grids
+    if ENABLE_PRIMARY_GRID:
+        plt.grid(which='major', linestyle='-', linewidth=0.75, alpha=0.7)
+    if ENABLE_SECONDARY_GRID:
+        plt.minorticks_on()
+        plt.grid(which='minor', linestyle=':', linewidth=0.5, alpha=0.5)
+
     plt.legend()
     plt.tight_layout()
 
