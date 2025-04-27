@@ -2,26 +2,26 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import os
 
-INP_PATHS = ['../2_experiment/data/irload.csv','../2_experiment/data/sqrt_s_ntot.csv']
-SERIES_NAMES = ['$I_{load}$', '$I_{ef}$']  # Names for each series
-SERIES_COLORS = ['blue', 'green']  # Colors for each series
+INP_PATHS = ['temp/1a_experiment.csv', 'temp/1a_experiment_Vref.csv']
+SERIES_NAMES = [r'$I_{out}$',r'$V_{ref}$']  # Names for each series
+SERIES_COLORS = ['blue','green']  # Colors for each series
 SECONDARY_AXIS_SERIES = [False, True]  # Specify True for series to be plotted on the secondary y-axis
-LTSPICE_FILE_NAME = "2_experiment_irload_ief"
-X_AXIS_TITLE = r"$f$"
-Y_AXIS_TITLE = "$I_{load}$, proud zátěží"
-Y_AXIS_SECONDARY_TITLE = "$I_{ef}$, šumový proud"
-X_AXIS_UNIT = "Hz"  # Unit for the x-axis (optional)
+LTSPICE_FILE_NAME = "1a_experiment"
+X_AXIS_TITLE = r"$\vartheta$"
+Y_AXIS_TITLE = r"$I_{out}$"
+Y_AXIS_SECONDARY_TITLE = r"$V_{ref}$"
+X_AXIS_UNIT = "°C"  # Unit for the x-axis (optional)
 Y_AXIS_UNIT = r"A"  # Unit for the primary y-axis (optional)
-Y_AXIS_SECONDARY_UNIT = r"A"  # Unit for the secondary y-axis (optional)
+Y_AXIS_SECONDARY_UNIT = 'V'  # Unit for the secondary y-axis (optional)
 LOG_X_AXIS = False  # Set to True to use a logarithmic scale for the x-axis
 LOG_Y_AXIS = False  # Set to True to use a logarithmic scale for the primary y-axis
 LOG_Y_AXIS_SECONDARY = False  # Set to True to use a logarithmic scale for the secondary y-axis
 ENABLE_PRIMARY_GRID = True  # Set to True to enable primary grid
 ENABLE_SECONDARY_GRID = True  # Set to True to enable secondary grid
-ENGINEERING_NOTATION_X = True  # Enable engineering notation for the x-axis
-ENGINEERING_NOTATION_Y = True  # Enable engineering notation for the primary y-axis
-ENGINEERING_NOTATION_Y_SECONDARY = True  # Enable engineering notation for the secondary y-axis
-ENABLE_LEGEND = True  # Set to True to enable legend
+ENGINEERING_NOTATION_X = False 
+ENGINEERING_NOTATION_Y = True 
+ENGINEERING_NOTATION_Y_SECONDARY = True
+ENABLE_LEGEND = True  
 
 SI_PREFIXES = {
     -18: 'a', -15: 'f', -12: 'p', -9: 'n', -6: 'u', -3: 'm', 0: '', 3: 'k', 6: 'M', 9: 'G', 12: 'T'
