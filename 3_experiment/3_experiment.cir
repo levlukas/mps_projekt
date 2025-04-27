@@ -5,23 +5,24 @@
 * Rb = (Vcc - Vref - Vbe) / (Iout/h_fe + I_u1)
 *
 * Experiment c. 3:
-* katodovy proud a katodove napeti
+* pulzni odezva
 *
 * NOTES:
 * - uzel 'in' byl prejmenovan na '3', z duvodu chyby .noise
 
 *** NETLIST ***
-*Vin 3 0 SIN 0 1 1k 0 0 0
-Vin 3 0 35
-Rb 3 kat 1k
-Rload 3 col {loadval}  ;stejne jako exp. 1a
-Rs ref 0 100  ;Iout = Vref / Rs -> Rs = 32.5/10m
-Xref ref 0 kat TL431
-Q1 col kat ref Q2N2222
+Vin     3   0    5    PULSE 0 5 1u 1f 1f 5u 10u
+Rb      a3  kat 1k
+Rload 3   col {valrload}  ;stejne jako exp. 1a
+Rs ref 0   100  ;Iout = Vref / Rs -> Rs = 32.5/10m
+Xref    ref  0   kat TL431
+Q1      col kat ref Q2N2222
+
+Vrb     3   a3   0
 
 *** PRIKAZY ***
-.param loadval = 100
-.step param loadval 1 3.25k 50
+.param valrload = 100 
+.tran 8n 8u 0 10u SKIPBP
 .lib tl431.mod
 .lib MPS.lib
 .probe
