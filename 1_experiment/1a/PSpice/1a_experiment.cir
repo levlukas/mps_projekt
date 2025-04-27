@@ -28,8 +28,8 @@ VIb in auxib 0  ;pomocne pro Ib
 
 *** PRIKAZY ***
 .step temp -20 150 17
-.include ../../tl431.mod
-.include ../../MPS.lib
+.include ../../../tl431.mod
+.include ../../../MPS.lib
 .op
 .end
 

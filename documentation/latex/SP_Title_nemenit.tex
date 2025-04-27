@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%														%
+%     Tuto Šablonu vytvořil Ing. Pavel Čudek, Ph.D.     %
+%			pro potřeby předmětů DME a DIZ 				%
+%														%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       %
+% Tento soubor slouží ke generování titulní strany      %
+% samostatné práce. Nic v tomto dokumentu neměňte.      %
+% Titulnístrana se generuje automaticky z hodnot        %
+% zadaných v souboru SP_Text.tex                        %
+%                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[line width = 2pt] ($(current page.north west) + (1cm,-1cm)$) rectangle ($(current page.south east) + (-1cm,1cm)$);
+	\end{tikzpicture}
+
+	\begin{center}
+		\vspace{-1.5cm}
+        
+		\begin{figure}[!h]
+            \centering
+			\includegraphics[width=14cm]{obrazky/umel.png}
+		\end{figure}
+
+		\vspace{3.5cm}
+
+		{SEMESTRÁLNÍ PRÁCE Z PŘEDMĚTU}\\
+		\vspace{0.25cm}
+
+		\large{\textbf{\predmet}}\\
+		\vspace{3.5cm}
+
+		\textbf{NÁZEV PRÁCE: \uloha}
+		\vspace{2.5cm}\\
+		\vfill
+    
+	\end{center}
+        \begin{tabular}{ll}
+            semestr: & LS 2024/2025 \\
+            skupina: & Út 18:00 \\
+            vypracoval: & {\jmeno} \\
+            datum: & \today
+        \end{tabular}
+\end{titlepage}
